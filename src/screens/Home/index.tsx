@@ -33,6 +33,7 @@ export default function HomeScreen({ navigation }: Props) {
                   borderColor: pressed || isPressed ? '#EA5455' : '#EA5455',
               },
           ]}
+          onPress={() => navigation.navigate('SignUp')}
           onPressIn={() => setIsPressed(true)}
           onPressOut={() => setIsPressed(false)}
         >
