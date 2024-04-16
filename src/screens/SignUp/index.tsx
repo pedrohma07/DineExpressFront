@@ -24,7 +24,7 @@ const SignUp = ({ navigation }: Props) => {
 
     return (
         <View style={styles.container}>
-            <ImageBackground source={bgImage} style={{width: '100%', height: '100%'}} >
+            <ImageBackground source={bgImage} style={{width: '100%'}} >
                 <View style={styles.form}>
                     <Image source={logo} style={styles.logo}></Image>
                     <Text style={styles.label} aria-label="Label for name" nativeID='labelName'>Name</Text>
