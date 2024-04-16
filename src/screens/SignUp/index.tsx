@@ -2,7 +2,12 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, ImageBackground, Pressable, Text, Image } from 'react-native';
 import { styles } from './styles.js';
 
-const SignUp = () => {
+
+type Props = {
+    navigation: any
+}
+
+const SignUp = ({ navigation }: Props) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [ssn, setSsn] = useState('');
@@ -47,10 +52,10 @@ const SignUp = () => {
                     </Pressable>
                     <View style={{width: "80%"}}>
                           <View style={styles.horizontalContainer}>
-                            <Text style={{  }}>
+                            <Text style={{color: "#777676" }}>
                                 Already have an account? 
                             </Text>
-                            <Pressable>
+                            <Pressable onPress={() => navigation.navigate('Login')}>
                                 <Text style={styles.linkText}> Login</Text>
                             </Pressable>
                         </View>

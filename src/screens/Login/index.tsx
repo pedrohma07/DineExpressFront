@@ -5,7 +5,11 @@ import { styles } from './styles.js';
 const image = require('../../../assets//background.png');
 const logo = require('../../../assets/logo.png');
 
-const LoginScreen = () => {
+type Props = {
+    navigation: any
+}
+
+const LoginScreen = ({ navigation }: Props) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -18,9 +22,7 @@ const LoginScreen = () => {
 
     const handleSignUp = () => {
         // Handle sign up logic here
-        Alert.alert(
-            'Sign Up button pressed',
-         )
+        navigation.navigate('SignUp');
     }
 
     const handleForgotPassword = () => {
@@ -65,7 +67,7 @@ const LoginScreen = () => {
                     </Pressable>
                     <View style={{width: "80%"}}>
                         <View style={styles.horizontalContainer}>
-                            <Text style={{  }}>
+                            <Text style={{ color: "#777676" }}>
                                 Don't have an account?
                             </Text>
                             <Pressable onPress={handleSignUp}>
